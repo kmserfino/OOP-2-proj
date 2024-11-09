@@ -59,7 +59,7 @@ class Main {
     }
 
     public function menu() {
-        echo "* EMPLOYEE ROSTER MENU *\n";
+        echo "* 𝐄𝐌𝐏𝐋𝐎𝐘𝐄𝐄 𝐑𝐎𝐒𝐓𝐄𝐑 𝐌𝐄𝐍𝐔 *\n";
         echo "[1] Add Employee\n";
         echo "[2] Delete Employee\n";
         echo "[3] Other Menu\n";
@@ -67,7 +67,7 @@ class Main {
     }
 
     public function addMenu() {
-        $name = readline("Enter employee name: ");
+        $name = readline("\nEnter employee name: ");
         $address = readline("Enter employee address: ");
         $age = (int)readline("Enter employee age: ");
         $companyName = readline("Enter company name: ");
@@ -77,11 +77,11 @@ class Main {
 
     public function empType($name, $address, $age, $cName) {
         $this->clear();
-        echo "--- Employee Details ---\n";
+        echo "- 𝐄𝐌𝐏𝐋𝐎𝐘𝐄𝐄 𝐃𝐄𝐓𝐀𝐈𝐋𝐒 -\n";
         echo "Name: $name\n";
         echo "Address: $address\n";
         echo "Company Name: $cName\n";
-        echo "Age: $age\n";
+        echo "Age: $age\n\n";
         echo "[1] Commission Employee\n";
         echo "[2] Hourly Employee\n";
         echo "[3] Piece Worker\n";
@@ -90,7 +90,7 @@ class Main {
     
         switch ($type) {
             case 1:
-                $regularSalary = (float)readline("Enter regular salary: ");
+                $regularSalary = (float)readline("\nEnter regular salary: ");
                 $itemsSold = (int)readline("Enter items sold: ");
                 $commissionRate = (float)readline("Enter commission rate (%): "); // Change here
                 $employee = new CommissionEmployee($name, $address, $age, $cName, $regularSalary, $itemsSold, $commissionRate);
@@ -122,7 +122,7 @@ class Main {
 
     public function deleteMenu() {
         $this->clear();
-        echo "* List of Employees on the Current Roster ***\n";
+        echo "* 𝐋𝐈𝐒𝐓 𝐎𝐅 𝐄𝐌𝐏𝐋𝐎𝐘𝐄𝐄𝐒 𝐎𝐍 𝐓𝐇𝐄 𝐂𝐔𝐑𝐑𝐄𝐍𝐓 𝐑𝐎𝐒𝐓𝐄𝐑 *\n";
         $this->roster->display(); // Display current employees
         $employeeNumber = (int)readline("Enter the employee number to delete (0 to cancel): ");
 
