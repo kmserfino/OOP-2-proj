@@ -47,7 +47,7 @@ class EmployeeRoster {
     }
 
     public function display(): void {
-        echo "*** List of Employees on the Current Roster ***\n";
+        echo "* 𝐋𝐈𝐒𝐓 𝐎𝐅 𝐄𝐌𝐏𝐋𝐎𝐘𝐄𝐄𝐒 𝐎𝐍 𝐓𝐇𝐄 𝐂𝐔𝐑𝐑𝐄𝐍𝐓 𝐑𝐎𝐒𝐓𝐄𝐑 *\n";
         foreach ($this->roster as $index => $employee) {
             if ($employee !== null) {
                 echo "Employee #" . ($index + 1) . "\n";
